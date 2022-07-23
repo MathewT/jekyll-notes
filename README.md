@@ -14,6 +14,12 @@ export site_name="my-jekyll-site" && export MSYS_NO_PATHCONV=1
 docker run --rm   --volume="$PWD:/srv/jekyll"   -it jekyll/jekyll   sh -c "chown -R jekyll /usr/gem/ && jekyll new $site_name"   && cd $site_name
 ```
 
+### Edit Gemfile and add webrick gem
+
+```bash
+gem 'webrick', '~> 1.3', '>= 1.3.1'
+```
+
 ### Use jekyll build to build the site (from inside the new site dir)
 
 ```bash
